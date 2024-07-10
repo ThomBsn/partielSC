@@ -1,4 +1,5 @@
 import {Orientation} from "../enum/Orientation"
+import {Movements} from "../enum/Movements";
 describe('Zoo', () => {
 
     // GIVEN
@@ -9,9 +10,9 @@ describe('Zoo', () => {
 
     it.each(
         [
-            {survivorAction:"forward", expectedX: 5, expectedY: 4, expectedOrientation: Orientation.Est},
-            {survivorAction:"turn left", expectedX: 4, expectedY: 4, expectedOrientation: Orientation.North},
-            {survivorAction:"right", expectedX: 4, expectedY: 5, expectedOrientation: Orientation.Est},
+            {survivorAction: Movements.Forward, expectedX: 5, expectedY: 4, expectedOrientation: Orientation.Est},
+            {survivorAction: Movements.TurnRight, expectedX: 4, expectedY: 4, expectedOrientation: Orientation.North},
+            {survivorAction: Movements.Right, expectedX: 4, expectedY: 5, expectedOrientation: Orientation.Est},
         ])
     ('should move in the correct direction', (params) => {
         // WHEN

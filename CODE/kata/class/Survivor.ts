@@ -1,4 +1,5 @@
 import {Orientation} from "../enum/Orientation"
+import {Movements} from "../enum/Movements"
 class Survivor {
     private _x: double;
     private _y: double;
@@ -44,6 +45,10 @@ class Survivor {
         this._health = value;
     }
 
-    explore()
+    public explore(action){
+        switch(action){
+
+        }
+    }
 }
 
